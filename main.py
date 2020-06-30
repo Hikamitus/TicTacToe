@@ -56,22 +56,20 @@ class TicTacToe:
                 local = int(input('Local: '));
                 while local < 1 or local > 9:
                     local = int(input('Local: '));
+                    
             except:
                 continue
             else:
-                break
-                    
-
-        while True:
-            if type(self.board[local]) == int:
-                self.board[local] = self.symbol;
-                press()
-                break
-            else:
-                #self.print_board()
-                print('O local já foi escolhido!');
-                local = int(input('Local: '))
-            
+                try:
+                    if type(self.board[local]) == int:
+                        self.board[local] = self.symbol;
+                        press()
+                        break
+                    else:
+                        print('O local já foi escolhido!');
+                        local = int(input('Local: '));
+                except:
+                    continue
         
     def play(self):
         while True:

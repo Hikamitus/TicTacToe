@@ -67,7 +67,6 @@ class TicTacToe:
                         break
                     else:
                         print('O local já foi escolhido!');
-                        local = int(input('Local: '));
                 except:
                     continue
         

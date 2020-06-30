@@ -36,7 +36,7 @@ class TicTacToe:
         
         boardin = self.board[1:];
         if all(type(l)==str for l in boardin) == True:
-            return f'{self.print_board}\nDeu Empate!';
+            return f'{self.print_board()}\nDeu Empate!';
         
     def botchoice(self):
         local = randint(1, 9)

@@ -99,6 +99,8 @@ class TicTacToe:
                 self.print_board();
                 head(self.verify());
                 press(); break;
+    def reset(self):
+        self.__init__()
 
 def head(text, symbol = '~', amount = 33):
     print(symbol*amount)
@@ -114,4 +116,6 @@ from os import system
 from random import randint
 
 game = TicTacToe()
-game.play();
+while True:
+    game.play();
+    game.reset();

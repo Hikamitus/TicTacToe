@@ -24,7 +24,7 @@ class TicTacToe:
     def verify(self):
         win = lambda x: f'''{self.board[x]} Win!''';
         if self.board[1] == self.board[2] == self.board[3]: return win(3)
-        if self.board[4] == self.board[5] == self.board[6]: return (6)
+        if self.board[4] == self.board[5] == self.board[6]: return win(6)
         if self.board[7] == self.board[8] == self.board[9]: return win(9)
             
         if self.board[1] == self.board[4] == self.board[7]: return win(7)
